@@ -1,0 +1,100 @@
+site_name: My Docs
+theme:
+  name: material
+  language: zh # 语言设置为中文
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy # 代码块复制按键
+    - navigation.top # 有回到页面最上方top的按键
+    - navigation.expand # 目录自动展开子目录
+    - toc.follow # 右侧toc随着页面滑动自动滑动
+    - navigation.tabs # 一级目录融合至顶栏，并且只展示二级目录
+    - navigation.tracking # 在翻到页面对应的标题处时，会将地址栏的地址更新成标题处的链接
+    - navigation.instant
+  custom_dir: overrides
+# Markdown extensions
+markdown_extensions:
+  - abbr # 可以展示缩写
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - attr_list
+  - pymdownx.highlight: #代码高亮
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.superfences 
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed: 
+      alternate_style: true
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.keys
+  - md_in_html #允许在HTML内部编写Markdown
+
+
+nav:
+  - Home: 'index.md'
+  - Unity: 
+    - Unity .NET: 'Unity/Unity .NET.md'
+    - 特殊文件夹: 'Unity/特殊文件夹.md'
+    - Resources资源动态加载: 'Unity/Resources资源动态加载.md'
+    - Unity Q&A: 'Unity/Unity Q&A.md'
+    - Transform扩展方法: 'Unity/Transform扩展方法.md'
+    - Transform坐标转换: 'Unity/Transform坐标转换.md'
+    - Unity协程(Coroutine): 'Unity/Unity协程(Coroutine).md'
+    - 鼠标键盘输入(Input): 'Unity/Input鼠标键盘输入.md'
+    - 屏幕相关(Screen): 'Unity/屏幕相关Screen.md'
+    - 相机(Camera): 'Unity/Camera.md'
+    - 光源系统(Light): 'Unity/光源系统.md'
+    - 物理系统之碰撞检测: 'Unity/物理系统之碰撞检测.md'
+  - Terminal: 
+    - PowerShell: 'Terminal/PowerShell.md'
+  - Git: 'Git.md'
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+
+plugins:
+  - glightbox # 图片放大
