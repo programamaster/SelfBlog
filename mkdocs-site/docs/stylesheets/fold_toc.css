@@ -1,4 +1,9 @@
 .md-nav__list a.is-active {
+  /* color: var(--md-default-fg-color--light); */
+  color: var(--md-typeset-a-color);
+}
+
+.md-nav__list a.is-passed {
   color: var(--md-default-fg-color--light);
 }
 
@@ -6,9 +11,10 @@
   color: #969696;
 }
 
-.md-sidebar--secondary .md-nav > .md-nav__list > li > a + .md-nav {
+.md-sidebar--secondary .md-nav>.md-nav__list>li>a+.md-nav {
   display: none;
 }
-.md-sidebar--secondary .md-nav > .md-nav__list > li > a.is-active + .md-nav {
+
+.md-sidebar--secondary .md-nav>.md-nav__list>li>a.is-active+.md-nav {
   display: block;
 }
