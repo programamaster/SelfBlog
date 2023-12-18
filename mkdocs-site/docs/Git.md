@@ -7,4 +7,5 @@
 
 [用21张图，把Git 工作原理彻底说清楚](https://cloud.tencent.com/developer/article/1893386)
  
+[用一个小游戏学习Git](https://learngitbranching.js.org/?locale=zh_CN)
 ## 
