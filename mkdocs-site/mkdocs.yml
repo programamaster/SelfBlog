@@ -85,8 +85,11 @@ nav:
       - 光源系统(Light): 'Unity/光源系统.md'
       - 物理系统之碰撞检测: 'Unity/物理系统之碰撞检测.md'
       - 音效系统: 'Unity/音效系统.md'
+    - Unity 核心:
+        - 动画窗口: 'Unity/Unity核心/动画窗口.md'
     - 数据持久化:
       - PlayerPrefs: 'Unity/PlayerPrefs.md'
+    
   - 常用工具:
     - Git: 'Git.md'
     - Terminal: 
