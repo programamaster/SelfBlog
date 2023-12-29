@@ -53,3 +53,26 @@ if( PlayerPrefs.HasKey("myName") )
 
 
 ## 删除相关
+``` C#
+//删除指定键值对
+PlayerPrefs.DeleteKey("myAge");
+//删除所有存储的信息
+PlayerPrefs.DeleteAll();
+```
+
+## 存储位置
+[Unity官方说明](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html)
+!!! info "不同平台的存储位置"
+    === "Windows"
+        注册表：HKEY_CURRENT_USER -> SOFTWARE -> Unity -> UnityEditor -> 公司名称[CompanyName] -> 产品名称[ProductName]  
+
+        其中公司和产品名称是 在“Project Settings”中设置的名称。
+
+    === "Android"
+        /data/data/包名/shared_prefs/pkg-name.xml 
+    === "IOS"
+        /Library/Preferences/[应用ID].plist
+
+## PlayerPrefs数据唯一性
+!!! Tip
+    PlayerPrefs中不同数据的 ==唯一性== ，是由key决定的，不同的key决定了不同的数据，同一项目中 ，如果不同数据key相同会造成数据丢失，要保证数据不丢失就要建立一个保证key唯一的规则。
